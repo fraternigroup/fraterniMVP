@@ -1,0 +1,112 @@
+/*Header*/
+.burger {
+    display: none; /* Oculta el símbolo en tabletas y laptops */
+}
+
+.navbarLogo img{
+    width: auto;
+    height: 40px;
+}
+
+.menu {
+    /* Agrega estilos para tu menú completo en tabletas y laptops */
+    /* Por ejemplo, podrías usar flexbox para alinear los elementos de menú */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-container{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.menu-container--corner {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Separación entre botones */
+}
+
+.menu-container--cta {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del botón "GET INVOLVED" */
+.menu-container--cta button:not(#langToggle) {
+    background-color: var(--fraterni-yellow); /* Fondo amarillo */
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px 8px 4px;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-container--cta .nav-separator{
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/icons/navSeparetor.svg");
+}
+
+.mobile-menu-container{
+    display: none;
+}
+
+.mobile-menu-container--image{
+    display: none;
+}
+/*Header End*/
+
+/*Header Container*/
+.header--title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.header--title-container .text-content {
+    flex: 1;
+    margin-right: 2rem; /* Espacio entre texto e imagen */
+}
+
+
+
+.header--title-container h1 {
+    font-size: 3.4rem;
+    font-weight: 900;
+    line-height: 3.6rem;
+    width: 600px;
+    align-items: left;
+}
+
+.header--title-container p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    width: 600px;
+    align-items: left;
+}
+
+.header--title-container br {
+    display: none;
+}
+/*Header Container End*/

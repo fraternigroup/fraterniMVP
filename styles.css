@@ -1,0 +1,195 @@
+:root {
+    /*Colores*/
+    --palm-green: #152517;
+    --geebung: #c49102;
+    --white: #ffffff;
+    --black: #000000;
+
+    /*Secondary Colors*/ 
+    --celtic: #1F3521;
+    
+}
+
+/*End Design Main Styles */
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style: none;
+    }
+
+  /* End Universal Selector */
+
+  /* HTML & Body Selector */
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: var(--fraterni-green);
+    }
+
+  /* End HTML Selector */
+
+  /* Norwester Font *Dont touch! (It doesnt support the  <meta charset="UTF-8"> */
+@font-face {
+    font-family: 'Norwester';
+    src: url('./assets/fonts/norwester.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+/* End of Norwester Font *Dont touch! (It doesnt support the  <meta charset="UTF-8"> */
+
+/* General Header and Menu Styles */
+
+#checkboxMobilemenu {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Set the height of the navbar */
+    background-color: var(--palm-green);
+    border-bottom: 5px solid var(--geebung);
+    padding: 0 20px;
+    position: fixed;
+    top: 0; /* Stick it to the top */
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbarLogo img {
+    height: 48px; /* Logo size */
+}
+
+.menu-container{
+    display: none;
+}
+
+.menu-container--corner{
+    display: none;
+}
+
+.mobile-menu-container--image {
+    cursor: pointer;
+}
+
+  /* Mobile Menu */
+.mobile-menu-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px); /* Cover everything except the navbar height */
+    background: var(--palm-green); 
+    transition: bottom 0.4s ease-in-out;
+    padding-top: 50px; /* Padding from top */
+    z-index: 999; /* Ensure it is above everything */
+}
+
+  /* Show Menu when Open */
+body.menu-open .mobile-menu-container {
+    bottom: 0;
+}
+
+  /* Menu Items */
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    padding-left: 32px;
+}
+
+ul.menu li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+ul.menu li a {
+    font-size: 1.6rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+ul.menu li.navbar-title {
+    font-size: 1.4rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Mobile Menu Icon (Hamburger) */
+.toggle {
+    position: relative;
+    width: 30px; /* Reducción del 25% (antes 40px) */
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(3px * 3 + 8px * 2); /* Ajustado para mantener proporciones */
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2.25px; /* Reducción proporcional (antes 3px) */
+    border-radius: 2px;
+    background: var(--white);
+    color: inherit;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
+}
+
+.bar--top {
+    bottom: calc(50% + 5px + 2.25px / 2); /* Ajustado para nuevo tamaño */
+    transition-property: bottom, margin, transform;
+    transition-delay: calc(0s + 0.35s), 0s, 0s;
+}
+
+.bar--middle {
+    top: calc(50% - 2.25px / 2);
+    transition-property: top, opacity;
+    transition-duration: 0.35s, 0s;
+    transition-delay: calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
+}
+
+.bar--bottom {
+    top: calc(50% + 5px + 2.25px / 2);
+    transition-property: top, transform;
+    transition-delay: 0s;
+}
+
+#checkboxMobilemenu:checked + .toggle .bar--top {
+    bottom: calc(50% - 8px - 2.25px);
+    margin-bottom: calc(8px + 2.25px / 2);
+    transform: rotate(45deg);
+    transition-delay: calc(0s + 0.35s * .3), calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
+}
+
+#checkboxMobilemenu:checked + .toggle .bar--middle {
+    top: calc(50% + 8px);
+    opacity: 0;
+    transition-duration: 0.35s, 0s;
+    transition-delay: 0s, calc(0s + 0.35s);
+}
+
+#checkboxMobilemenu:checked + .toggle .bar--bottom {
+    top: calc(50% - 2.25px / 2);
+    transform: rotate(-45deg);
+    transition-delay: calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
+}
+
+
