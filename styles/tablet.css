@@ -35,7 +35,6 @@
 .menu-container--corner {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Separación entre botones */
 }
 
 .menu-container--cta {
@@ -57,7 +56,7 @@
 
 .menu-container--cta .nav-separator{
     display: inline-block;
-    width: 1px;
+    width: 2px;
     height: 16px;
     background-size: cover;
     background-position: center;
