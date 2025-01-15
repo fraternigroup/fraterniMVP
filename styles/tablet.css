@@ -42,7 +42,7 @@
     align-items: center;
 }
 
-/* Estilos del botón "GET INVOLVED" */
+/* Estilos del botón "More" */
 .menu-container--cta button:not(#langToggle) {
     background-color: var(--fraterni-yellow); /* Fondo amarillo */
     color: white;
@@ -72,40 +72,36 @@
     display: none;
 }
 /*Header End*/
-
-/*Header Container*/
-.header--title-container {
+/* Tablet Styles */
+.hero-header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    text-align: center;
-    margin-top: 4rem;
+    padding: 4rem;
 }
 
-.header--title-container .text-content {
-    flex: 1;
-    margin-right: 2rem; /* Espacio entre texto e imagen */
+.hero-content {
+    max-width: 50%;
+    text-align: left;
 }
 
-
-
-.header--title-container h1 {
-    font-size: 3.4rem;
-    font-weight: 900;
-    line-height: 3.6rem;
-    width: 600px;
-    align-items: left;
+.hero-content h1 {
+    font-size: 3rem;
 }
 
-.header--title-container p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.4rem;
-    width: 600px;
-    align-items: left;
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.header--title-container br {
-    display: none;
+.hero-image {
+    display: block;
+    max-width: 50%;
 }
-/*Header Container End*/
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
