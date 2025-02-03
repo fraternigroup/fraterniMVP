@@ -1,0 +1,107 @@
+/*Header*/
+.burger {
+    display: none; /* Oculta el símbolo en tabletas y laptops */
+}
+
+.navbarLogo img{
+    width: auto;
+    height: 40px;
+}
+
+.menu {
+    /* Agrega estilos para tu menú completo en tabletas y laptops */
+    /* Por ejemplo, podrías usar flexbox para alinear los elementos de menú */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-container{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.menu-container--corner {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container--cta {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del botón "More" */
+.menu-container--cta button:not(#langToggle) {
+    background-color: var(--fraterni-yellow); /* Fondo amarillo */
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-container--cta .nav-separator{
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/icons/navSeparetor.svg");
+}
+
+.mobile-menu-container{
+    display: none;
+}
+
+.mobile-menu-container--image{
+    display: none;
+}
+/*Header End*/
+/* Tablet Styles */
+.hero-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.hero-image {
+    display: block;
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
